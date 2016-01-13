@@ -1,0 +1,25 @@
+{
+  "name": "clock-app",
+  "version": "1.0.0",
+  "description": "web app that shows the time",
+  "main": "index.js",
+  "dependencies": {
+    "hapi": "^12.1.0",
+    "moment": "*",
+    "inert": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencassidy/clock-app.git"
+  },
+  "author": "bencassidy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bencassidy/clock-app/issues"
+  },
+  "homepage": "https://github.com/bencassidy/clock-app#readme"
+}

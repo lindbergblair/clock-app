@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7064429d-068b-44c8-9d7e-ec1b7ea31289" name="clock" url="http://54.200.121.78">
+        <fileTransfer host="54.200.121.78" port="22" privateKey="C:\Users\Ben Cassidy\.ssh\desktop.pem" accessType="SFTP" username="ec2-user" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

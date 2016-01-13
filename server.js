@@ -5,6 +5,8 @@ var moment = require('moment');
 var server = new hapi.Server();
 server.connection({ port: 3000 });
 
+
+
 server.start(function () {
     console.log('Server running at:', server.info.uri);
 });
@@ -23,10 +25,13 @@ server.register(inert, function (err) {
     });
 });
 
+var testDateUtc = moment.utc("2015-01-30 10:00:00");
+var localDate = moment(testDateUtc).local();
+
 server.route({
     method: 'GET',
     path: '/time',
     handler: function (request, reply) {
-        reply(moment().format('MMMM Do YYYY, h:mm:ss a'));
+        reply(localdate.format("YYYY-MM-DD HH:mm:ss"));
     }
 });

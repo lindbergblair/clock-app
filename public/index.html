@@ -74,22 +74,5 @@
 <script src="../../dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="https://cdn.rawgit.com/moment/moment/develop/moment.js"></script>
-<script src="https://cdn.rawgit.com/moment/moment-timezone/develop/moment-timezone.js"></script>
-<script>
-  moment.tz.add([
-      'America/Los_Angeles|PST PDT|80 70|01010101010|1Lzm0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0',
-      'America/New_York|EST EDT|50 40|0101|1Lz50 1zb0 Op0'
-  ]);
-  function showTheTime() {
-      var s = moment().tz("America/Los_Angeles").format('MMMM Do YYYY, h:mm:ss a');
-      document.getElementById("test-timezone").innerHTML = s;
-      //console.log(moment.tz.guess());
-  }
-
-  showTheTime(); // for the first load
-  setInterval(showTheTime, 250); // update it periodically
-
-</script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.center {
+  margin: auto;
+  text-align: center;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+  <div class="center">
+    <h1>The time is...</h1>
+    <p id="test-timezone"></p>
+  </div>
+
+  <script src="https://cdn.rawgit.com/moment/moment/develop/moment.js"></script>
+  <script src="https://cdn.rawgit.com/moment/moment-timezone/develop/moment-timezone.js"></script>
+  <script>
+    moment.tz.add([
+        'America/Los_Angeles|PST PDT|80 70|01010101010|1Lzm0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0',
+        'America/New_York|EST EDT|50 40|0101|1Lz50 1zb0 Op0'
+    ]);
+    function updateTime() {
+        var time = moment().tz("America/Los_Angeles").format('MMMM Do YYYY, h:mm:ss a');
+        document.getElementById("test-timezone").innerHTML = time;
+        //console.log(moment.tz.guess());
+    }
+
+    updateTime(); // for the first load
+    setInterval(updateTime, 250); // update it periodically
+
+  </script>
+</body>
+</html>

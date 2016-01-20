@@ -21,13 +21,22 @@ server.register(inert, function (err) {
             reply.file('./public/index.html');
         }
     });
+
+    server.route({
+        method: 'GET',
+        path: '/time',
+        handler: function (request, reply) {
+            reply.file('./public/time.html');
+        }
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/{filename*}',
+        handler: function (request, reply) {
+            reply.file('./public/' + request.params.filename);
+        }
+    });
 });
 
-server.route({
-    method: 'GET',
-    path: '/time',
-    handler: function (request, reply) {
-        //reply(moment().tz('America/Los_Angeles').format('MMMM Do YYYY, h:mm:ss a'));
-        reply.file('./public/time.html');
-    }
-});
+
